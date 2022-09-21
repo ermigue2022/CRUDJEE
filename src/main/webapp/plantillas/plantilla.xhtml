@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+
+	<title>
+		<ui:insert name="tituloPagina">CRUD con JSF</ui:insert>
+	</title>
+	
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+	</head>
+
+</h:head>
+
+<h:body bgcolor="#ffffff">
+
+<table style="border: 3px solid #CAD6E0" align="center" cellpadding="0" cellspacing="0" border="0" width="800">
+	<tr>
+		<td height="42" align="center" valign="middle" width="100">
+		<h:graphicImage value="/imagenes/Logo_cuevas.jpg" />
+		</td>
+	</tr>
+	<tr>
+		<td class="header" height="30" align="center" valign="middle" width="100%" style="font-family: Verdana,Arial,Helvetica, sans-serif;
+						   font-size: 18px; color: navy">
+			<ui:insert name="tituloFormulario">CRUD JAVA CON JSF Y BD</ui:insert>
+		</td>
+	</tr>
+	<tr>
+		<td height="1" width="100%" bgcolor="#CAD6E0"></td>
+	</tr>
+	<tr>
+		<td>
+			<TABLE>AQUI VA EL CONTENIDO DE LA PLANTILLA</TABLE>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" height="100%" bgcolor="#CAD6E0" style="font-family: Verdana,Arial,Helvetica, sans-serif;
+						font-style: italic; font-size: 14px">
+						<ui:insert name="autor">@Copyright macuevas</ui:insert>
+			
+		</td>
+	</tr>
+
+</table>
+
+</h:body>
+
+</html>
