@@ -11,7 +11,8 @@
 	</title>
 	
 	<head>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/> 
+	
 	</head>
 
 </h:head>
@@ -34,8 +35,15 @@
 		<td height="1" width="100%" bgcolor="#CAD6E0"></td>
 	</tr>
 	<tr>
-		<td>
-			<TABLE>AQUI VA EL CONTENIDO DE LA PLANTILLA</TABLE>
+		<td width="100" colspan="2">
+			<TABLE width="100%" style="height: 150px" align="left" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="center" width="100%" valign="middle" class="formulario" style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 14px;">
+						<ui:insert name="contenido">AQUI VA EL CONTENIDO DE LA PLANTILLA</ui:insert>
+				</td>
+				
+			</tr>
+			</TABLE>
 		</td>
 	</tr>
 	<tr>

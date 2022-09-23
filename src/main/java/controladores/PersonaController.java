@@ -16,9 +16,10 @@ public class PersonaController {
 	//aqui definiremos los métodos que se conectan directamente con la pagina web, deben de retornar NULL
 	//Podemos usar los mismo nombre que en transacciones pero vamos a cambiarselo para diferenciar
 	
-	private List<Persona> listaPersona = new ArrayList<Persona>();
+	static List<Persona> listaPersona = new ArrayList<Persona>();
 	private Persona persona;
 	private Servicio crud = new Servicio();
+	
 	public PersonaController() { //para resetear la persona que nos faltaba del método seleccionarTodo()
 		setPersona(new Persona());
 	}
@@ -31,15 +32,16 @@ public class PersonaController {
 	}
 	public Persona obtenerPersona(int id) {
 		this.persona = crud.obtenerPersona(id);
-		return null;
+		return this.persona;
 	}
-	public String insertar(Persona persona) {
+	public String insertar() {
 		crud.insertar(persona);
 		persona=new Persona();
 		seleccionarTodo();
+		
 		return null;
 	}
-	public String actualizar (Persona persona) {
+	public String actualizar() {
 		crud.actualizar(persona);
 		persona=new Persona();
 		seleccionarTodo();

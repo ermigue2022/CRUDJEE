@@ -129,7 +129,7 @@ public class Conexion implements Transacciones{
 
 	@Override
 	public void insertar(Persona p) { //MARCADORES DE POSICION ?
-		String sql="INSERT INTO persona(nombre,apellido,cedula,direccion) VALUES(?,?,?,?,?)";
+		String sql="INSERT INTO persona(nombre,apellido,cedula,direccion) VALUES(?,?,?,?)";
 		
 		try {
 			Connection conn = this.conectar();

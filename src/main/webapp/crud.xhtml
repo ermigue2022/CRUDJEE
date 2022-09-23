@@ -8,13 +8,75 @@
 
 <h:body bgcolo="skyblue">
 <ui:composition template="/plantillas/plantilla.xhtml"> 
-	<ui:define name="contenido"></ui:define>
+	<ui:define name="contenido">
 	
 	
 	<h:form>
-	<p />
-	<h2>BIENVENIDOS</h2>
+		<p />
+		<h:panelGrid columns="2">
+		
+		<h:outputLabel value="ID" for="id" />
+		<h:inputText value="#{personaController.persona.id}" id="id" />
+		
+		<h:outputLabel value="NOMBRE" for="nombre"/>
+		<h:inputText value="#{personaController.persona.nombre}" id="nombre" />
+		
+		<h:outputLabel value="APELLIDO" for="apellido" />
+		<h:inputText value="#{personaController.persona.apellido}" id="apellido" />
+		
+		<h:outputLabel value="NIF" for="cedula" />
+		<h:inputText value="#{personaController.persona.cedula}" id="cedula" />
+		
+		<h:outputLabel value="DIRECCION" for="direccion" />
+		<h:inputText value="#{personaController.persona.direccion}" id="direccion" />
+		
+		<p />
+		<p />
+		</h:panelGrid>
+		
+		<h:commandButton action="#{personaController.seleccionarTodo()}" value="Mostrar" styleClass="btn btn-success" />
+		<h:commandButton action="#{personaController.insertar()}" value="Insertar" styleClass="btn btn-primary" />
+		<h:commandButton action="#{personaController.actualizar()}" value="Actualizar" styleClass="btn btn-dark" />
+		<p />
+		<h2><h:outputText value="Listado de Personas"></h:outputText></h2>
+		
+		<h:dataTable value="#{personaController.listaPersona}" var="p" styleClass="table table-striped">
+		
+		<h:column>
+			<f:facet name="header">ID</f:facet>
+			<h:outputText value="#{p.id}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">NOMBRE</f:facet>
+			<h:outputText value="#{p.nombre}"/>
+		</h:column>	
+		<h:column>
+			<f:facet name="header">APELLIDO</f:facet>
+			<h:outputText value="#{p.apellido}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">NIF</f:facet>
+			<h:outputText value="#{p.cedula}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">DIRECCION</f:facet>
+			<h:outputText value="#{p.direccion}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header"></f:facet>
+			<h:commandLink action="#{personaController.obtenerPersona(p.id)}" value="Modificar"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header"></f:facet>
+			<h:commandLink action="#{personaController.eliminar(p.id)}" value="Eliminar"/>
+		</h:column>
+		
+		</h:dataTable>
+		
 	</h:form>
+	<p />
+	
+	</ui:define>
 </ui:composition>
 </h:body> 
 </html>
